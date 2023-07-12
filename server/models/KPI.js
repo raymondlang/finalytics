@@ -1,4 +1,4 @@
-import mongoose, { MongooseError } from "mongoose";
+import mongoose from "mongoose";
 import { loadType } from "mongoose-currency";
 
 const Schema = mongoose.Schema;
@@ -65,19 +65,20 @@ const KPISchema = new Schema(
       currency: "USD",
       get: (v) => v / 100,
     },
-    expensebyCategory: {
+    expensesByCategory: {
       type: Map,
       of: {
         type: mongoose.Types.Currency,
         currency: "USD",
         get: (v) => v / 100,
       },
-      monthlyData: [monthSchema],
-      dailydata: [daySchema],
     },
+    monthlyData: [monthSchema],
+    dailyData: [daySchema],
   },
   { timestamps: true, toJSON: { getters: true } }
 );
 
 const KPI = mongoose.model("KPI", KPISchema);
+
 export default KPI;

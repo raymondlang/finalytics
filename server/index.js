@@ -22,8 +22,6 @@ app.use(cors());
 // Routes
 app.use("/kpi", kpiRoutes);
 
-console.log("hello");
-
 const PORT = process.env.PORT || 9000;
 
 mongoose
@@ -33,7 +31,6 @@ mongoose
   })
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-
     // ADD DATA ONCE ONLY AS NEEDED
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);

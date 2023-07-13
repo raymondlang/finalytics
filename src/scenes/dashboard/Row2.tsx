@@ -21,14 +21,15 @@ const Row2 = (props: Props) => {
   const { palette } = useTheme();
   const operationalExpenses = useMemo(() => {
     return (
-      data &&
-      data[0].monthlyData.map(({ month, revenue, expenses }) => {
-        return {
-          name: month.substring(0, 3),
-          revenue: revenue,
-          expenses: expenses,
-        };
-      })
+      operationalData &&
+      operationalData[0].monthlyData.map(
+        ({ month, revenue, operationalExpenses }) => {
+          return {
+            name: month.substring(0, 3),
+            "Operational Expenses": operationalExpenses,
+          };
+        }
+      )
     );
   }, [data]);
 

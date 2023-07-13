@@ -18,9 +18,11 @@ import {
 
 type Props = {};
 const Row2 = (props: Props) => {
+  const { palette } = useTheme();
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
-  const { palette } = useTheme();
+  const pieColor = [palette.primary[800], palette.primary[300]];
+
   const operationalExpenses = useMemo(() => {
     return (
       operationalData &&

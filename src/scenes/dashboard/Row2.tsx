@@ -93,7 +93,16 @@ const Row2 = (props: Props) => {
       </DashboardBox>
       <DashboardBox gridArea="e">
         {" "}
-        <PieChart width={110} height={400} onMouseEnter={this.onPieEnter}>
+        <PieChart
+          width={110}
+          height={100}
+          margin={{
+            top: 20,
+            right: 0,
+            left: -10,
+            bottom: 55,
+          }}
+        >
           <Pie
             data={data}
             cx={120}

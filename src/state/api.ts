@@ -10,6 +10,10 @@ export const api = createApi({
       query: () => "kpi/kpis/",
       providesTags: ["Kpis"],
     }),
+    getProudcts: build.query<Array<GetKpisResponse>, void>({
+      query: () => "kpi/kpis/",
+      providesTags: ["Kpis"],
+    }),
   }),
 });
 

@@ -21,16 +21,6 @@ const ProductSchema = new Schema(
       currency: "USD",
       get: (v) => v / 100,
     },
-    expensesByCategory: {
-      type: Map,
-      of: {
-        type: mongoose.Types.Currency,
-        currency: "USD",
-        get: (v) => v / 100,
-      },
-    },
-    monthlyData: [monthSchema],
-    dailyData: [daySchema],
   },
   { timestamps: true, toJSON: { getters: true } }
 );

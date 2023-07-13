@@ -1,6 +1,6 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
-import { useGetProductsQuery } from "@/state/api";
+import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
 import { useTheme } from "@mui/material";
 import { useMemo } from "react";
 import {
@@ -16,7 +16,7 @@ import {
 
 type Props = {};
 const Row2 = (props: Props) => {
-  const { data } = useGetProductsQuery();
+  const { data: operationalData } = useGetKpisQuery();
   const { palette } = useTheme();
   const operationalExpenses = useMemo(() => {
     return (

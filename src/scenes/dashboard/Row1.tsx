@@ -26,7 +26,6 @@ const Row1 = () => {
     return (
       data &&
       data[0].monthlyData.map(({ month, revenue }) => {
-        console.log(revenue);
         return {
           name: month.substring(0, 3),
           revenue: revenue,

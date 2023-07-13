@@ -26,6 +26,7 @@ const Row1 = () => {
     return (
       data &&
       data[0].monthlyData.map(({ month, revenue }) => {
+        console.log(revenue);
         return {
           name: month.substring(0, 3),
           revenue: revenue,
@@ -68,7 +69,7 @@ const Row1 = () => {
           subtitle="top line represents revenue, bottom line represents expenses"
           sideText="+4%"
         />
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={220}>
           <AreaChart
             width={500}
             height={400}
@@ -143,7 +144,7 @@ const Row1 = () => {
           subtitle="top line represents revenue, bottom line represents expenses"
           sideText="+4%"
         />
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={220}>
           <LineChart
             width={500}
             height={400}
@@ -202,7 +203,7 @@ const Row1 = () => {
           subtitle="graph representing the revenue month by month"
           sideText="+4%"
         />
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={220}>
           <BarChart
             width={500}
             height={300}

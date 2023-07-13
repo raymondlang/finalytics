@@ -46,6 +46,7 @@ const Row2 = (props: Props) => {
             />
             <YAxis
               yAxisId="left"
+              orientation="left"
               tickLine={false}
               axisLine={false}
               style={{ fontSize: "10px" }}

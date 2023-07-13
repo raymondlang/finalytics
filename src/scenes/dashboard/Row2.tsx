@@ -23,7 +23,7 @@ const Row2 = (props: Props) => {
     return (
       operationalData &&
       operationalData[0].monthlyData.map(
-        ({ month, revenue, operationalExpenses, nonOperationalExpenses }) => {
+        ({ month, operationalExpenses, nonOperationalExpenses }) => {
           return {
             name: month.substring(0, 3),
             "Operational Expenses": operationalExpenses,

@@ -16,12 +16,17 @@ import {
   YAxis,
 } from "recharts";
 
+const pieData = [
+  { name: "Group A", value: 600 },
+  { name: "Group B", value: 400 },
+];
+
 type Props = {};
 const Row2 = (props: Props) => {
   const { palette } = useTheme();
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
-  const pieColor = [palette.primary[800], palette.primary[300]];
+  const pieColors = [palette.primary[800], palette.primary[300]];
 
   const operationalExpenses = useMemo(() => {
     return (
@@ -106,6 +111,7 @@ const Row2 = (props: Props) => {
           }}
         >
           <Pie
+            stroke="none"
             data={pieData}
             innerRadius={18}
             outerRadius={38}
@@ -113,7 +119,7 @@ const Row2 = (props: Props) => {
             dataKey="value"
           >
             {pieData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={CpieColors[index]} />
+              <Cell key={`cell-${index}`} fill={pieColors[index]} />
             ))}
           </Pie>
         </PieChart>

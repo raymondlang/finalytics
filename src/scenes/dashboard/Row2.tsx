@@ -17,14 +17,16 @@ import {
 type Props = {};
 const Row2 = (props: Props) => {
   const { data: operationalData } = useGetKpisQuery();
+  const { data: productData } = useGetProductsQuery();
   const { palette } = useTheme();
   const operationalExpenses = useMemo(() => {
     return (
       data &&
-      data[0].monthlyData.map(({ month, revenue }) => {
+      data[0].monthlyData.map(({ month, revenue, expenses }) => {
         return {
           name: month.substring(0, 3),
           revenue: revenue,
+          expenses: expenses,
         };
       })
     );

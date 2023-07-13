@@ -5,7 +5,6 @@ import { useTheme } from "@mui/material";
 import { useMemo } from "react";
 import {
   CartesianGrid,
-  Legend,
   Line,
   LineChart,
   ResponsiveContainer,

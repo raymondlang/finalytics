@@ -1,6 +1,7 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetProductsQuery } from "@/state/api";
+import { useTheme } from "@mui/material";
 import {
   CartesianGrid,
   Legend,
@@ -15,12 +16,13 @@ import {
 type Props = {};
 const Row2 = (props: Props) => {
   const { data } = useGetProductsQuery();
-  console.log(useGetProductsQuery());
+  const { palette } = useTheme();
+
   return (
     <>
       <DashboardBox gridArea="d">
         <BoxHeader
-          title="Profit and Revenue"
+          title="Operational vs Non-Operational Expenses"
           subtitle="top line represents revenue, bottom line represents expenses"
           sideText="+4%"
         />
@@ -56,22 +58,17 @@ const Row2 = (props: Props) => {
               style={{ fontSize: "10px" }}
             />
             <Tooltip />
-            <Legend
-              height={20}
-              wrapperStyle={{
-                margin: "0 0 10px 0",
-              }}
-            />
+
             <Line
               yAxisId="left"
               type="monotone"
-              dataKey="profit"
+              dataKey="Non Operational Expenses"
               stroke={palette.tertiary[500]}
             />
             <Line
               yAxisId="right"
               type="monotone"
-              dataKey="revenue"
+              dataKey="Operational Expenses"
               stroke={palette.primary.main}
             />
           </LineChart>

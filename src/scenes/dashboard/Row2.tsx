@@ -97,27 +97,21 @@ const Row2 = (props: Props) => {
           width={110}
           height={100}
           margin={{
-            top: 20,
-            right: 0,
-            left: -10,
-            bottom: 55,
+            top: 0,
+            right: -10,
+            left: 10,
+            bottom: 0,
           }}
         >
           <Pie
-            data={data}
-            cx={120}
-            cy={200}
-            innerRadius={60}
-            outerRadius={80}
-            fill="#8884d8"
-            paddingAngle={5}
+            data={pieData}
+            innerRadius={18}
+            outerRadius={38}
+            paddingAngle={2}
             dataKey="value"
           >
-            {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
+            {pieData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={CpieColors[index]} />
             ))}
           </Pie>
         </PieChart>

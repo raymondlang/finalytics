@@ -18,6 +18,7 @@ const Row3 = () => {
   const { data: kpiData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
   const { data: transactionData } = useGetTransactionsQuery();
+  console.log(transactionData);
 
   const pieChartData = useMemo(() => {
     if (kpiData) {
@@ -95,7 +96,7 @@ const Row3 = () => {
         <Box
           mt="0.5rem"
           p="0 0.5rem"
-          height="75%"
+          height={220}
           sx={{
             "& .MuiDataGrid-root": {
               color: palette.grey[300],
@@ -129,7 +130,7 @@ const Row3 = () => {
         <Box
           mt="1rem"
           p="0 0.5rem"
-          height="80%"
+          height={280}
           sx={{
             "& .MuiDataGrid-root": {
               color: palette.grey[300],

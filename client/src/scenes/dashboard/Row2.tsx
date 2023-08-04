@@ -1,7 +1,10 @@
 import BoxHeader from "../../components/BoxHeader";
 import DashboardBox from "../../components/DashboardBox";
 import FlexBetween from "../../components/FlexBetween";
-import { useGetKpisQuery, useGetProductsQuery } from "../../state/api";
+import {
+  useGetKpisQuery,
+  // useGetProductsQuery
+} from "../../state/api";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
 import {
@@ -118,7 +121,7 @@ const Row2 = () => {
               paddingAngle={2}
               dataKey="value"
             >
-              {pieData.map((entry, index) => (
+              {pieData.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={pieColors[index]} />
               ))}
             </Pie>

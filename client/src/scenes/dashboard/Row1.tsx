@@ -1,4 +1,3 @@
-import React from "react";
 import BoxHeader from "../../components/BoxHeader";
 import DashboardBox from "../../components/DashboardBox";
 import { useGetKpisQuery } from "../../state/api";

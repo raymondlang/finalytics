@@ -25,7 +25,7 @@ const pieData = [
 const Row2 = () => {
   const { palette } = useTheme();
   const { data: operationalData } = useGetKpisQuery();
-  const { data: productData } = useGetProductsQuery();
+  // const { data: productData } = useGetProductsQuery();
   const pieColors = [palette.primary[800], palette.primary[300]];
 
   const operationalExpenses = useMemo(() => {

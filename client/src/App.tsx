@@ -1,5 +1,4 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import React from "react";
 import { useMemo } from "react";
 import { themeSettings } from "./theme";
 import { BrowserRouter, Route } from "react-router-dom";

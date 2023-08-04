@@ -1,4 +1,3 @@
-import React from "react";
 import BoxHeader from "../../components/BoxHeader";
 import DashboardBox from "../../components/DashboardBox";
 import FlexBetween from "../../components/FlexBetween";
@@ -23,8 +22,7 @@ const pieData = [
   { name: "Group B", value: 400 },
 ];
 
-type Props = {};
-const Row2 = (props: Props) => {
+const Row2 = () => {
   const { palette } = useTheme();
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();

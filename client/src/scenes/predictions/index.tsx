@@ -1,6 +1,7 @@
-import DashboardBox from "@/components/DashboardBox";
-import FlexBetween from "@/components/FlexBetween";
-import { useGetKpisQuery } from "@/state/api";
+import React from "react";
+import DashboardBox from "../../components/DashboardBox";
+import FlexBetween from "../../components/FlexBetween";
+import { useGetKpisQuery } from "../../state/api";
 import { Box, Button, Typography, useTheme } from "@mui/material";
 import { useMemo, useState } from "react";
 import {

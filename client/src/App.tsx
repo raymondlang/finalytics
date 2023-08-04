@@ -1,12 +1,13 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import React from "react";
 import { useMemo } from "react";
 import { themeSettings } from "./theme";
 import { BrowserRouter, Route } from "react-router-dom";
 import { Box } from "@mui/material";
 import { Routes } from "react-router-dom";
-import Navbar from "@/scenes/navbar";
+import Navbar from "./scenes/navbar";
 import Dashboard from "./scenes/dashboard";
-import Predictions from "@/scenes/predictions";
+import Predictions from "./scenes/predictions";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);

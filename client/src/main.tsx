@@ -5,7 +5,6 @@ import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { api } from "./state/api";
-import React from "react";
 
 export const store = configureStore({
   reducer: { [api.reducerPath]: api.reducer },

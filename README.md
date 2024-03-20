@@ -1,4 +1,4 @@
-Finalytics is comprehensive finance app dashboard that incorporates simple predictions, providing users with valuable insights and data-driven recommendations There is a basic frontend installations to set up the development environment and ensure smooth workflow during the app development process and configured Material-UI (MUI) to enhance the app's visual aesthetics and user interface, enabling a modern and intuitive user experience.
+Finalytics is comprehensive finance app dashboard that focuses on providing users with valuable insights and data-driven recommendations. One feature incorporates simple linear regression predictions for provided datasets. There is a basic frontend installations to set up the development environment and ensure smooth workflow during the app development process and configured Material-UI (MUI) to enhance the app's visual aesthetics and user interface, enabling a modern and intuitive user experience.
 
 [Click here to view Finalytics's Live Site](https://finalytics-weld.vercel.app/)
 

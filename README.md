@@ -42,10 +42,6 @@ Finalytics is comprehensive finance app dashboard that incorporates simple predi
   * Features server-side pagination for handling large datasets.
   * A more complex implementation compared to typical tutorials, showcasing advanced techniques.
 
-## Geography Page
-  * Displays user locations using Nivo geography chart.
-  * Enhances data visualization for geographical data.
-
 ## Revenue Charts
   * Line charts showing revenue by month.
   * Users can swap between sales and units for a comprehensive view.
@@ -77,3 +73,8 @@ Finalytics is comprehensive finance app dashboard that incorporates simple predi
 ## Entity Relationship Diagram (ERD)
   * Shows how data models are organized in the backend.
   * Helps save time and ensures well-organized data structures.
+
+## Want to Add:
+### Geography Page
+  * Displays user locations using Nivo geography chart.
+  * Enhances data visualization for geographical data.

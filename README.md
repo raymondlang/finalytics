@@ -27,7 +27,7 @@ Finalytics is finance app dashboard that focuses on providing users with valuabl
 ## State management
 * used Redux Toolkit for state management and RTK query for data fetching and caching tool
 
-## Specific charts for select KPIs
+## Best-fit chart for each KPIs
   * Displays different stats, a line chart, a transaction table, and a pie chart.
   * Data is stored and fetched from MongoDB database
   * Mouse hover event displays data
